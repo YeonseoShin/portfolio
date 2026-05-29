@@ -155,8 +155,3 @@ document.querySelectorAll('.side-card').forEach((el, i) => {
 document.querySelectorAll('.info-card').forEach((el, i) => {
   el.style.transitionDelay = `${i * 50}ms`;
 });
-
-// ── Hero 카드 스택 진입 애니메이션 ──
-document.querySelectorAll('.hcard').forEach((el, i) => {
-  el.style.animationDelay = `${0.2 + i * 0.12}s`;
-});
