@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WordSprint — 영단어 학습 게임</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+<a href="../../index.html" class="back-btn">← 포트폴리오로</a>
+
+<!-- START SCREEN -->
+<div id="screen-start" class="screen">
+  <div class="start-card">
+    <div class="app-logo">W</div>
+    <h1 class="app-title">WordSprint</h1>
+    <p class="app-sub">영단어 게임형 학습</p>
+    <div class="level-btns">
+      <button onclick="startGame('basic')">⭐ 기초</button>
+      <button onclick="startGame('intermediate')">⭐⭐ 중급</button>
+      <button onclick="startGame('advanced')">⭐⭐⭐ 고급</button>
+    </div>
+    <div class="stats-row" id="start-stats"></div>
+  </div>
+</div>
+
+<!-- QUIZ SCREEN -->
+<div id="screen-quiz" class="screen hidden">
+  <div class="quiz-wrap">
+    <div class="quiz-topbar">
+      <span id="q-progress" class="q-prog">1 / 10</span>
+      <span id="q-combo" class="q-combo hidden">🔥 콤보 ×1</span>
+      <span id="q-timer" class="q-timer">⏱ 10</span>
+    </div>
+    <div class="timer-bar-bg"><div id="timer-bar" class="timer-bar"></div></div>
+    <div class="word-area">
+      <div id="q-word" class="q-word"></div>
+      <div id="q-pron" class="q-pron"></div>
+      <div id="q-pos"  class="q-pos"></div>
+    </div>
+    <div class="options" id="options"></div>
+    <div id="q-feedback" class="q-feedback hidden"></div>
+  </div>
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="screen-result" class="screen hidden">
+  <div class="result-card">
+    <div id="r-emoji" class="r-emoji">🎉</div>
+    <h2 id="r-title" class="r-title"></h2>
+    <div class="r-stats">
+      <div class="r-stat"><div class="r-stat-val" id="r-score"></div><div class="r-stat-label">점수</div></div>
+      <div class="r-stat"><div class="r-stat-val" id="r-correct"></div><div class="r-stat-label">정답</div></div>
+      <div class="r-stat"><div class="r-stat-val" id="r-best-combo"></div><div class="r-stat-label">최고 콤보</div></div>
+    </div>
+    <div id="r-history" class="r-history"></div>
+    <div class="r-btns">
+      <button onclick="startGame(currentLevel)">다시 도전</button>
+      <button onclick="showStart()" class="outline">레벨 선택</button>
+    </div>
+  </div>
+</div>
+
+<script src="data/words.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

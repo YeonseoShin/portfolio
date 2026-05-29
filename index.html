@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>신연서 | Frontend Developer Portfolio</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Pretendard:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-logo">YS</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#activity">활동</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#side">Side Projects</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Frontend Developer · Data Visualizer
+      </div>
+      <h1 class="hero-headline">
+        데이터를<br>
+        <em>읽히는 언어</em>로<br>
+        번역합니다
+      </h1>
+      <p class="hero-desc">영어교육 전공과 데이터과학 이중전공을 바탕으로, 복잡한 수치와 정보를 사람이 직관적으로 이해할 수 있는 인터페이스로 만드는 프론트엔드 개발자입니다.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">프로젝트 보기 ↓</a>
+        <a href="https://github.com/YeonseoShin" target="_blank" class="btn-secondary">GitHub →</a>
+      </div>
+      <div class="hero-name-small">신연서 · Yeonseo Shin</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card-stack">
+        <div class="hcard hcard-1">
+          <div class="hcard-label">Recent</div>
+          <div class="hcard-title">UCLA 교환학생</div>
+          <div class="hcard-sub">통계학 &amp; 데이터사이언스 · 2025</div>
+        </div>
+        <div class="hcard hcard-2">
+          <div class="hcard-label">Award</div>
+          <div class="hcard-title">예금보험공사 공모전</div>
+          <div class="hcard-sub">🏆 장려상 · 2025</div>
+        </div>
+        <div class="hcard hcard-3">
+          <div class="hcard-label">Score</div>
+          <div class="hcard-scores">
+            <span>OPIc <strong>AL</strong></span>
+            <span>TOEIC <strong>970</strong></span>
+            <span>IELTS <strong>7.0</strong></span>
+          </div>
+        </div>
+        <div class="hcard hcard-4">
+          <div class="hcard-label">Stack</div>
+          <div class="hcard-tags">
+            <span>React</span><span>TypeScript</span><span>Python</span><span>SVG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll-hint" aria-label="아래로 스크롤">
+    <span class="scroll-line"></span>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-wrap">
+  <div class="section-tag">About</div>
+  <h2 class="section-title">소개</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>안녕하세요, 고려대학교 <strong>영어교육학과</strong>를 본전공으로, <strong>데이터과학과</strong>를 이중전공하고 있는 신연서입니다.</p>
+      <p>언어와 데이터 두 분야를 넘나들며, 복잡한 정보를 누구나 직관적으로 이해할 수 있는 인터페이스로 만드는 것에 관심이 있습니다. 비전 AI 연동 실시간 스켈레톤 시각화, 공공데이터 기반 금융 리스크 대시보드 등 <strong>데이터와 프론트엔드가 교차하는 지점</strong>에서의 구현 경험을 쌓아왔습니다.</p>
+      <p>외부 라이브러리에 의존하기보다 삼각함수 기반 각도 계산, SVG 동적 렌더링, Canvas API 등 <strong>웹 표준 기술을 직접 다루는 것</strong>을 즐깁니다.</p>
+      <div class="about-tags">
+        <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">SVG</span>
+        <span class="tag">Chart.js</span><span class="tag">Python</span><span class="tag">pandas</span>
+        <span class="tag">Vanilla JS</span><span class="tag">Vite</span>
+      </div>
+    </div>
+    <div class="about-info">
+      <div class="info-card">
+        <div class="info-label">Education</div>
+        <div class="info-val">고려대학교</div>
+        <div class="info-sub">영어교육학과 (본전공) · 데이터과학과 (이중전공)</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Language</div>
+        <div class="info-credentials">
+          <div class="cred-row"><span class="cred-name">OPIc</span><span class="cred-val accent">AL</span></div>
+          <div class="cred-row"><span class="cred-name">TOEIC</span><span class="cred-val">970</span></div>
+          <div class="cred-row"><span class="cred-name">IELTS</span><span class="cred-val">7.0</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Certifications</div>
+        <div class="info-credentials">
+          <div class="cred-row"><span class="cred-name">ADsP</span><span class="cred-date">25.03</span></div>
+          <div class="cred-row"><span class="cred-name">SQL 개발자</span><span class="cred-date">25.04</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Overseas</div>
+        <div class="info-val" style="font-size:14px;">UCLA 교환학생</div>
+        <div class="info-sub">25.09 ~ 25.12 · 통계학 &amp; 데이터사이언스</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Contact</div>
+        <div class="info-val">shinalicelife@naver.com</div>
+        <div class="info-sub">010-5942-3623</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITY -->
+<section id="activity" class="section-wrap">
+  <div class="section-tag">Activity</div>
+  <h2 class="section-title">활동 이력</h2>
+  <div class="activity-list">
+
+    <div class="activity-item">
+      <div class="activity-date">25.09 ~ 25.12</div>
+      <div>
+        <div class="activity-title">한미 첨단분야 청년교류 지원사업 제3기 장학생 <span class="award-badge">🎓 장학</span></div>
+        <div class="activity-desc">AI and Cybersecurity in Silicon Valley를 테마로 미국 현지 기업 및 연구 현장 방문 학습. UCLA 교환학생으로 파견되어 통계학·데이터사이언스 관련 전공 수업을 영어로 수강하며 다국적 팀 프로젝트를 수행했습니다.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-date">26.01 ~ 26.02</div>
+      <div>
+        <div class="activity-title">여명학교 방과후 영어 멘토링 수업 (봉사 60시간)</div>
+        <div class="activity-desc">탈북 청소년 및 제3국 출생 탈북민 자녀를 대상으로 영어 교과 수업 진행. 학생 개별 학습 수준을 분석하여 맞춤형 교재를 직접 제작하고 수업을 운영했습니다.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-date">2025. 08</div>
+      <div>
+        <div class="activity-title">예금보험공사 공공데이터 활용 아이디어 공모전 <span class="award-badge">🏆 장려상</span></div>
+        <div class="activity-desc">금융권역별 안정성 리포트 자동생성 서비스 기획 및 개발. 금융감독원·예금보험공사 Open API를 활용해 권역별 주요 건전성 지표를 시각화한 리포트 시스템을 1인 수행.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-date">25.03 ~ 25.06</div>
+      <div>
+        <div class="activity-title">파이낸셜 와이드 대학생 기자단 1기</div>
+        <div class="activity-desc">IT과학부 대학생 기자로 활동. AI 기술, 디지털 자산, 금융 정책 등을 중심으로 금융권의 디지털 전환 트렌드를 취재하고 기사를 작성했습니다.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-date">2024. 하반기</div>
+      <div>
+        <div class="activity-title">운동 자세 및 관절 궤적 진단 인터페이스 개발 (팀 프로젝트)</div>
+        <div class="activity-desc">비전 AI 라이브러리가 추출한 신체 관절 좌표를 실시간 SVG 스켈레톤으로 시각화하는 인터페이스 개발. <strong>프론트엔드 담당</strong>으로 컴포넌트 설계, 삼각함수 각도 계산 로직 구현, 대시보드 UI 개발을 맡음.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-date">2024. 02</div>
+      <div>
+        <div class="activity-title">2023학년도 2학기 학업 성적 우수 학장상 <span class="award-badge">🏅 GPA 4.5/4.5</span></div>
+        <div class="activity-desc">2023학년도 2학기 전 과목 A+ 달성으로 학업 성적 우수 학장상 수상.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-date">2023. 03 ~</div>
+      <div>
+        <div class="activity-title">고려대학교 입학 — 영어교육학과 본전공 / 데이터과학과 이중전공</div>
+        <div class="activity-desc">언어학·교육학 기반의 영어교육 전공과 데이터 구조·알고리즘·머신러닝 기반의 데이터과학 이중전공을 병행 중.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAIN PROJECTS -->
+<section id="projects" class="section-wrap">
+  <div class="section-tag">Main Projects</div>
+  <h2 class="section-title">주요 프로젝트</h2>
+  <div class="projects-list">
+
+    <!-- 1. Pose Diagnosis -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">운동 자세 및 관절 궤적 진단 인터페이스</h3>
+        <span class="project-badge" style="color:#4f46e5;border-color:#c7d2fe;background:#eef2ff;">Frontend</span>
+      </div>
+      <div class="project-meta">React · TypeScript · SVG · Claude Vision API · Vite</div>
+      <p class="project-desc">비전 AI 라이브러리가 추출하여 전달하는 신체 관절 좌표 배열 데이터를 컴포넌트에 연동하고, SVG의 Line과 Circle 요소로 역동적인 스켈레톤 구조를 실시간 렌더링합니다. 세 점의 공간 좌표 기반 삼각함수 계산 로직으로 관절 각도를 추출해 대시보드 UI에 반영합니다.</p>
+      <div class="role-box">
+        <div class="role-title">역할 분담</div>
+        <div class="role-grid">
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>프론트엔드 개발 (담당)</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>SVG 스켈레톤 렌더링 로직</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>삼각함수 각도 계산 구현</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>관절 각도 대시보드 UI</div>
+          <div class="role-item"><span class="role-dot"></span>비전 AI 모델 연동 (백엔드)</div>
+          <div class="role-item"><span class="role-dot"></span>관절 좌표 추출 파이프라인</div>
+        </div>
+      </div>
+      <div class="action-btns">
+        <button class="btn-preview" onclick="toggle('pv-pose',this)">▶ 미리보기</button>
+        <button class="btn-code" onclick="toggle('cd-pose',this)">&lt;/&gt; 주요 소스 코드</button>
+        <a class="btn-visit" href="projects/pose-diagnosis/index.html" target="_blank">🔗 웹사이트 방문</a>
+      </div>
+      <div class="panel" id="pv-pose">
+        <div class="browser-bar">
+          <span class="bdot" style="background:#ef4444"></span>
+          <span class="bdot" style="background:#f59e0b"></span>
+          <span class="bdot" style="background:#10b981"></span>
+          <span class="burl">projects/pose-diagnosis/index.html</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 300px;height:420px;">
+          <div style="background:#f8f9fc;position:relative;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--border);">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:72px;opacity:0.05;">🏋️</div>
+            <svg id="pose-svg" viewBox="0 0 300 420" style="position:absolute;inset:0;width:100%;height:100%;">
+              <line id="b-spine" stroke="#4f46e5" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+              <line id="b-thigh" stroke="#4f46e5" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+              <line id="b-calf"  stroke="#4f46e5" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+              <circle id="j-shoulder" cx="150" cy="70"  r="7" fill="#fff" stroke="#4f46e5" stroke-width="2.5" style="cursor:grab"/>
+              <circle id="j-hip"      cx="150" cy="180" r="7" fill="#fff" stroke="#4f46e5" stroke-width="2.5" style="cursor:grab"/>
+              <circle id="j-knee"     cx="112" cy="280" r="7" fill="#fff" stroke="#4f46e5" stroke-width="2.5" style="cursor:grab"/>
+              <circle id="j-ankle"    cx="152" cy="370" r="7" fill="#fff" stroke="#4f46e5" stroke-width="2.5" style="cursor:grab"/>
+            </svg>
+            <div style="position:absolute;bottom:10px;left:12px;font-family:var(--mono);font-size:10px;color:var(--text3);">관절을 드래그하여 조작하세요</div>
+          </div>
+          <div style="padding:20px;background:#fff;display:flex;flex-direction:column;gap:16px;">
+            <div style="font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--text3);font-family:var(--mono);text-transform:uppercase;">Real-time Kinematics</div>
+            <div>
+              <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">운동 구간</div>
+              <div id="p-phase" style="display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:500;font-family:var(--mono);background:#eef2ff;color:#4f46e5;border:1px solid #c7d2fe;">● 하강 구간</div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:6px;">
+                <div style="font-size:12px;color:var(--text2);">무릎 각도</div>
+                <div id="p-angle" style="font-family:var(--mono);font-size:22px;font-weight:600;color:#4f46e5;">—°</div>
+              </div>
+              <div style="height:4px;background:var(--bg3);border-radius:99px;overflow:hidden;">
+                <div id="p-bar" style="height:100%;width:50%;background:#4f46e5;transition:width .1s;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">자세 피드백</div>
+              <div style="display:flex;gap:8px;align-items:flex-start;background:var(--bg2);padding:10px 12px;border-radius:8px;border:1px solid var(--border);">
+                <div id="p-dot" style="width:7px;height:7px;border-radius:50%;background:#4f46e5;margin-top:5px;flex-shrink:0;"></div>
+                <span id="p-text" style="font-size:12px;color:var(--text2);line-height:1.6;">안정적인 하강 각도를 유지하고 있습니다.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel" id="cd-pose">
+        <div class="code-block">
+          <div class="code-topbar">
+            <span class="code-filename">src/utils/angleUtils.ts</span>
+            <button class="copy-btn" onclick="copyCode(this)">복사</button>
+          </div>
+          <pre class="code-pre"><span class="ck">/**
+ * 세 점의 좌표를 받아 b를 꼭짓점으로 하는 각도를 계산 (도 단위)
+ * 자소서에 기재한 삼각함수 계산 로직
+ */</span>
+<span class="kw">export function</span> <span class="fn">calcAngle</span>(
+  a: <span class="tp">NormalizedCoord</span>,
+  b: <span class="tp">NormalizedCoord</span>,
+  c: <span class="tp">NormalizedCoord</span>
+): <span class="tp">number</span> {
+  <span class="kw">const</span> v1 = [a[<span class="nm">0</span>] - b[<span class="nm">0</span>], a[<span class="nm">1</span>] - b[<span class="nm">1</span>]]
+  <span class="kw">const</span> v2 = [c[<span class="nm">0</span>] - b[<span class="nm">0</span>], c[<span class="nm">1</span>] - b[<span class="nm">1</span>]]
+  <span class="kw">const</span> dot  = v1[<span class="nm">0</span>] * v2[<span class="nm">0</span>] + v1[<span class="nm">1</span>] * v2[<span class="nm">1</span>]
+  <span class="kw">const</span> mag1 = Math.<span class="fn">sqrt</span>(v1[<span class="nm">0</span>] ** <span class="nm">2</span> + v1[<span class="nm">1</span>] ** <span class="nm">2</span>)
+  <span class="kw">const</span> mag2 = Math.<span class="fn">sqrt</span>(v2[<span class="nm">0</span>] ** <span class="nm">2</span> + v2[<span class="nm">1</span>] ** <span class="nm">2</span>)
+  <span class="kw">if</span> (!mag1 || !mag2) <span class="kw">return</span> <span class="nm">0</span>
+  <span class="kw">const</span> cos = Math.<span class="fn">min</span>(<span class="nm">1</span>, Math.<span class="fn">max</span>(-<span class="nm">1</span>, dot / (mag1 * mag2)))
+  <span class="kw">return</span> Math.<span class="fn">round</span>(Math.<span class="fn">acos</span>(cos) * <span class="nm">180</span> / Math.PI)
+}</pre>
+        </div>
+        <div class="code-block" style="margin-top:10px;">
+          <div class="code-topbar">
+            <span class="code-filename">src/components/SkeletonOverlay.tsx</span>
+            <button class="copy-btn" onclick="copyCode(this)">복사</button>
+          </div>
+          <pre class="code-pre"><span class="kw">export default function</span> <span class="fn">SkeletonOverlay</span>({ joints, imageLayout }: <span class="tp">Props</span>) {
+  <span class="kw">const</span> { offsetX, offsetY, width, height, containerW, containerH } = imageLayout
+
+  <span class="ck">/** 정규화 좌표 → SVG viewBox(0~100) 좌표 변환 */</span>
+  <span class="kw">function</span> <span class="fn">toSVG</span>(coord: <span class="tp">NormalizedCoord</span>): [<span class="tp">number</span>, <span class="tp">number</span>] {
+    <span class="kw">return</span> [
+      ((offsetX + coord[<span class="nm">0</span>] * width)  / containerW) * <span class="nm">100</span>,
+      ((offsetY + coord[<span class="nm">1</span>] * height) / containerH) * <span class="nm">100</span>,
+    ]
+  }
+
+  <span class="kw">return</span> (
+    &lt;<span class="fn">svg</span> viewBox=<span class="st">"0 0 100 100"</span> style={{ position: <span class="st">'absolute'</span>, inset: <span class="nm">0</span> }}&gt;
+      {CONNECTIONS.<span class="fn">map</span>(([a, b]) =&gt; {
+        <span class="kw">const</span> [x1,y1] = <span class="fn">toSVG</span>(joints[a]!)
+        <span class="kw">const</span> [x2,y2] = <span class="fn">toSVG</span>(joints[b]!)
+        <span class="kw">return</span> &lt;<span class="fn">line</span> key={`${a}-${b}`} x1={x1} y1={y1} x2={x2} y2={y2}
+                 stroke=<span class="st">"#6c7fff"</span> strokeWidth=<span class="st">"0.7"</span> /&gt;
+      })}
+    &lt;/<span class="fn">svg</span>&gt;
+  )
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. KDIC -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">금융권역별 안정성 리포트 대시보드</h3>
+        <span class="project-badge" style="color:#0891b2;border-color:#a5f3fc;background:#ecfeff;">Full-stack</span>
+        <span class="award-inline">🏆 장려상</span>
+      </div>
+      <div class="project-meta">Python · pandas · Altair · Tableau · Chart.js · 예금보험공사 공공데이터</div>
+      <p class="project-desc">다수 기관의 Open API 응답 데이터를 하나의 통일된 구조로 정규화하고, 출연금·회수율·보험금지급 지표를 가중합산한 TrustScore 알고리즘으로 금융권역별 안정성을 수치화합니다.</p>
+      <div class="role-box">
+        <div class="role-title">역할 분담 (1인 프로젝트)</div>
+        <div class="role-grid">
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>전체 기획 및 개발 (단독)</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>pandas 데이터 정제 파이프라인</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>TrustScore 알고리즘 설계</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>Chart.js 시각화 구현</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>Figma UI/UX 설계</div>
+        </div>
+      </div>
+      <div class="action-btns">
+        <button class="btn-preview" onclick="toggle('pv-kdic',this)">▶ 미리보기</button>
+        <button class="btn-code" onclick="toggle('cd-kdic',this)">&lt;/&gt; 주요 소스 코드</button>
+        <a class="btn-visit" href="projects/kdic/index.html" target="_blank">🔗 웹사이트 방문</a>
+      </div>
+      <div class="panel" id="pv-kdic">
+        <div class="browser-bar">
+          <span class="bdot" style="background:#ef4444"></span>
+          <span class="bdot" style="background:#f59e0b"></span>
+          <span class="bdot" style="background:#10b981"></span>
+          <span class="burl">projects/kdic/index.html</span>
+        </div>
+        <div style="background:#fff;padding:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:12px;margin-bottom:16px;">
+            <div>
+              <div style="font-size:11px;color:var(--text3);margin-bottom:2px;">예금보험공사 공공데이터 활용</div>
+              <div style="font-size:17px;font-weight:700;">금융권역별 안정성 리포트</div>
+            </div>
+            <select id="kdic-year" onchange="renderKDIC()" style="padding:6px 12px;border:1px solid var(--border);border-radius:7px;font-size:13px;font-family:var(--body);outline:none;cursor:pointer;">
+              <option value="2025">2025년 6월말</option>
+              <option value="2023">2023년말</option>
+              <option value="2020">2020년말</option>
+              <option value="2015">2015년말</option>
+            </select>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;">
+            <div class="mini-stat"><div class="mini-stat-label">분석 권역 수</div><div class="mini-stat-val">6</div></div>
+            <div class="mini-stat"><div class="mini-stat-label">평균 TrustScore</div><div class="mini-stat-val" id="k-avg">—</div></div>
+            <div class="mini-stat"><div class="mini-stat-label">최고 안정</div><div class="mini-stat-val" style="color:#059669;" id="k-top">—</div></div>
+            <div class="mini-stat"><div class="mini-stat-label">고위험</div><div class="mini-stat-val" style="color:#dc2626;" id="k-low">—</div></div>
+          </div>
+          <div style="height:200px;position:relative;"><canvas id="kdic-bar" role="img" aria-label="권역별 TrustScore 막대그래프"></canvas></div>
+        </div>
+      </div>
+      <div class="panel" id="cd-kdic">
+        <div class="code-block">
+          <div class="code-topbar">
+            <span class="code-filename">src/utils/trustScore.py</span>
+            <button class="copy-btn" onclick="copyCode(this)">복사</button>
+          </div>
+          <pre class="code-pre"><span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy  <span class="kw">as</span> np
+
+<span class="kw">def</span> <span class="fn">calc_trust_score</span>(df: pd.DataFrame) -> pd.DataFrame:
+    <span class="st">"""출연금 · 보험금지급 · 회수율 기반 가중 점수 계산"""</span>
+    max_ch  = df[<span class="st">'출연금'</span>].max()    <span class="kw">or</span> <span class="nm">1</span>
+    max_ins = df[<span class="st">'보험금지급'</span>].max() <span class="kw">or</span> <span class="nm">1</span>
+
+    df[<span class="st">'ch_score'</span>]  = <span class="nm">30</span> * (<span class="nm">1</span> - df[<span class="st">'출연금'</span>] / max_ch)
+    df[<span class="st">'ins_score'</span>] = np.where(
+        df[<span class="st">'보험금지급'</span>] == <span class="nm">0</span>, <span class="nm">20</span>,
+        <span class="nm">20</span> * (<span class="nm">1</span> - df[<span class="st">'보험금지급'</span>].clip(<span class="nm">0</span>, max_ins) / max_ins)
+    )
+    df[<span class="st">'rec_score'</span>] = <span class="nm">30</span> * df[<span class="st">'회수율'</span>]
+    df[<span class="st">'bonus'</span>]     = np.where(
+        (df[<span class="st">'회수율'</span>] > <span class="nm">0.5</span>) & (df[<span class="st">'출연금'</span>] < max_ch * <span class="nm">0.3</span>), <span class="nm">10</span>, <span class="nm">4</span>
+    )
+    df[<span class="st">'TrustScore'</span>] = (
+        df[[<span class="st">'ch_score'</span>,<span class="st">'ins_score'</span>,<span class="st">'rec_score'</span>,<span class="st">'bonus'</span>]]
+        .sum(axis=<span class="nm">1</span>).clip(<span class="nm">0</span>, <span class="nm">100</span>).round(<span class="nm">1</span>)
+    )
+    <span class="kw">return</span> df.sort_values(<span class="st">'TrustScore'</span>, ascending=<span class="nm">False</span>)</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIDE PROJECTS -->
+<section id="side" class="section-wrap">
+  <div class="section-tag">Side Projects</div>
+  <h2 class="section-title">사이드 프로젝트</h2>
+  <div class="side-grid">
+
+    <!-- Kanban -->
+    <div class="side-card" style="--accent-card:#4f46e5;--accent-light-card:#eef2ff;--accent-border-card:#c7d2fe;">
+      <div class="side-card-top">
+        <div class="side-title">TaskFlow Kanban Board</div>
+        <div class="side-tags"><span class="tag">HTML5 D&D API</span><span class="tag">Vanilla JS</span></div>
+        <p class="side-desc">외부 라이브러리 없이 순수 HTML5 Drag &amp; Drop API와 Vanilla JS로 구현한 칸반 보드. 컬럼 간 드래그 이동, 카드 추가, 완료 처리까지 지원합니다.</p>
+      </div>
+      <div class="side-btns">
+        <button class="side-btn-preview" onclick="toggle('pv-kanban',this)">▶ 미리보기</button>
+        <button class="side-btn-code" onclick="toggle('cd-kanban',this)">&lt;/&gt; 주요 소스 코드</button>
+        <a class="side-btn-visit" href="projects/kanban/index.html" target="_blank">🔗 웹사이트 방문</a>
+      </div>
+      <div class="panel" id="pv-kanban">
+        <div class="kb-mini">
+          <div class="kb-col"><div class="kb-col-h"><span class="kb-dot" style="background:#f59e0b;"></span>To Do</div><div class="kb-body"><div class="kb-card"><span class="kb-tag" style="background:#fef3c7;color:#92400e;">UI/UX</span><div>다크모드 시안 제작</div></div><div class="kb-card"><span class="kb-tag" style="background:#dbeafe;color:#1e40af;">Frontend</span><div>반응형 리팩토링</div></div></div></div>
+          <div class="kb-col"><div class="kb-col-h"><span class="kb-dot" style="background:#6366f1;"></span>In Progress</div><div class="kb-body"><div class="kb-card"><span class="kb-tag" style="background:#dbeafe;color:#1e40af;">Frontend</span><div>Drag &amp; Drop 구현</div></div></div></div>
+          <div class="kb-col"><div class="kb-col-h"><span class="kb-dot" style="background:#10b981;"></span>Done</div><div class="kb-body"><div class="kb-card" style="opacity:.6;"><span class="kb-tag" style="background:#fee2e2;color:#991b1b;">Bug</span><div style="text-decoration:line-through;color:#9ca3af;">레이아웃 수정</div></div></div></div>
+        </div>
+      </div>
+      <div class="panel" id="cd-kanban">
+        <div class="code-block">
+          <div class="code-topbar"><span class="code-filename">src/kanban.js</span><button class="copy-btn" onclick="copyCode(this)">복사</button></div>
+          <pre class="code-pre"><span class="ck">// HTML5 Drag & Drop API 기반 칸반 로직</span>
+<span class="kw">let</span> dragCard = <span class="nm">null</span>;
+
+<span class="kw">function</span> <span class="fn">initCard</span>(card) {
+  card.<span class="fn">addEventListener</span>(<span class="st">'dragstart'</span>, () => {
+    dragCard = card;
+    <span class="fn">setTimeout</span>(() => card.classList.<span class="fn">add</span>(<span class="st">'dragging'</span>), <span class="nm">0</span>);
+  });
+  card.<span class="fn">addEventListener</span>(<span class="st">'dragend'</span>, () => {
+    card.classList.<span class="fn">remove</span>(<span class="st">'dragging'</span>);
+    dragCard = <span class="nm">null</span>;
+    <span class="fn">updateCounts</span>();
+  });
+}
+
+document.<span class="fn">querySelectorAll</span>(<span class="st">'.col'</span>).<span class="fn">forEach</span>(col => {
+  col.<span class="fn">addEventListener</span>(<span class="st">'dragover'</span>, e => {
+    e.<span class="fn">preventDefault</span>();
+    col.classList.<span class="fn">add</span>(<span class="st">'drag-over'</span>);
+  });
+  col.<span class="fn">addEventListener</span>(<span class="st">'drop'</span>, e => {
+    e.<span class="fn">preventDefault</span>();
+    col.classList.<span class="fn">remove</span>(<span class="st">'drag-over'</span>);
+    <span class="kw">if</span> (!dragCard) <span class="kw">return</span>;
+    col.<span class="fn">querySelector</span>(<span class="st">'.col-body'</span>).<span class="fn">appendChild</span>(dragCard);
+    <span class="kw">const</span> done = col.dataset.status === <span class="st">'done'</span>;
+    dragCard.style.opacity = done ? <span class="st">'0.6'</span> : <span class="st">'1'</span>;
+  });
+});</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vocab Game -->
+    <div class="side-card" style="--accent-card:#059669;--accent-light-card:#ecfdf5;--accent-border-card:#a7f3d0;">
+      <div class="side-card-top">
+        <div class="side-title">WordSprint — 영단어 학습 게임</div>
+        <div class="side-tags"><span class="tag">Vanilla JS</span><span class="tag">CSS Animation</span><span class="tag">localStorage</span></div>
+        <p class="side-desc">영어교육 전공 배경으로 기획한 게임형 단어 학습 앱. 4지선다 퀴즈, 타이머, 연속 정답 콤보, 학습 히스토리 저장 기능을 구현했습니다.</p>
+      </div>
+      <div class="side-btns">
+        <button class="side-btn-preview" style="background:#ecfdf5;color:#059669;" onclick="toggle('pv-vocab',this)">▶ 미리보기</button>
+        <button class="side-btn-code" onclick="toggle('cd-vocab',this)">&lt;/&gt; 주요 소스 코드</button>
+        <a class="side-btn-visit" style="background:#059669;" href="projects/vocab-game/index.html" target="_blank">🔗 웹사이트 방문</a>
+      </div>
+      <div class="panel" id="pv-vocab">
+        <div style="background:#ecfdf5;padding:20px;display:flex;justify-content:center;">
+          <div style="background:#fff;border-radius:16px;border:1px solid #a7f3d0;padding:24px;width:100%;max-width:400px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+              <span style="font-size:12px;color:#6b7280;font-family:var(--mono);">3 / 10</span>
+              <span style="font-size:12px;font-weight:600;color:#059669;background:#ecfdf5;padding:3px 10px;border-radius:99px;border:1px solid #a7f3d0;">🔥 콤보 ×3</span>
+              <span style="font-size:12px;font-weight:600;font-family:var(--mono);color:#dc2626;">⏱ 08</span>
+            </div>
+            <div style="text-align:center;margin-bottom:20px;">
+              <div style="font-size:28px;font-weight:700;letter-spacing:.05em;">EPHEMERAL</div>
+              <div style="font-size:13px;color:#9ca3af;margin-top:4px;">[ɪˈfem.ər.əl]</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <button style="padding:10px;border-radius:10px;border:1.5px solid #e5e7eb;background:#f9fafb;font-size:13px;cursor:pointer;text-align:left;">영구적인</button>
+              <button style="padding:10px;border-radius:10px;border:1.5px solid #a7f3d0;background:#ecfdf5;font-size:13px;font-weight:600;color:#059669;cursor:pointer;text-align:left;">일시적인 ✓</button>
+              <button style="padding:10px;border-radius:10px;border:1.5px solid #e5e7eb;background:#f9fafb;font-size:13px;cursor:pointer;text-align:left;">모호한</button>
+              <button style="padding:10px;border-radius:10px;border:1.5px solid #e5e7eb;background:#f9fafb;font-size:13px;cursor:pointer;text-align:left;">강렬한</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel" id="cd-vocab">
+        <div class="code-block">
+          <div class="code-topbar"><span class="code-filename">src/quiz.js</span><button class="copy-btn" onclick="copyCode(this)">복사</button></div>
+          <pre class="code-pre"><span class="ck">// 4지선다 퀴즈 + 콤보 시스템 핵심 로직</span>
+<span class="kw">function</span> <span class="fn">loadQuestion</span>() {
+  <span class="kw">const</span> word = words[currentIdx];
+  document.<span class="fn">getElementById</span>(<span class="st">'word'</span>).textContent = word.en;
+
+  <span class="ck">// 오답 3개를 랜덤 추출하여 섞기</span>
+  <span class="kw">const</span> wrong = words
+    .<span class="fn">filter</span>(w => w !== word)
+    .<span class="fn">sort</span>(() => Math.<span class="fn">random</span>() - <span class="nm">0.5</span>)
+    .<span class="fn">slice</span>(<span class="nm">0</span>, <span class="nm">3</span>);
+  <span class="kw">const</span> choices = [...wrong, word].<span class="fn">sort</span>(() => Math.<span class="fn">random</span>() - <span class="nm">0.5</span>);
+
+  choices.<span class="fn">forEach</span>((c, i) => {
+    <span class="kw">const</span> btn = optionBtns[i];
+    btn.textContent = c.ko;
+    btn.dataset.correct = String(c === word);
+    btn.className = <span class="st">'option-btn'</span>;
+  });
+  <span class="fn">startTimer</span>();
+}
+
+<span class="kw">function</span> <span class="fn">handleAnswer</span>(btn) {
+  <span class="fn">clearInterval</span>(timerInterval);
+  <span class="kw">const</span> isCorrect = btn.dataset.correct === <span class="st">'true'</span>;
+  <span class="kw">if</span> (isCorrect) {
+    combo++;
+    score += <span class="nm">10</span> + (combo - <span class="nm">1</span>) * <span class="nm">5</span>; <span class="ck">// 콤보 보너스</span>
+    btn.classList.<span class="fn">add</span>(<span class="st">'correct'</span>);
+  } <span class="kw">else</span> {
+    combo = <span class="nm">0</span>;
+    btn.classList.<span class="fn">add</span>(<span class="st">'wrong'</span>);
+    optionBtns.<span class="fn">find</span>(b => b.dataset.correct === <span class="st">'true'</span>)
+      ?.classList.<span class="fn">add</span>(<span class="st">'correct'</span>);
+  }
+  <span class="fn">saveHistory</span>(words[currentIdx], isCorrect);
+  <span class="fn">setTimeout</span>(nextQuestion, <span class="nm">900</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Savings -->
+    <div class="side-card" style="--accent-card:#7c3aed;--accent-light-card:#f5f3ff;--accent-border-card:#ddd6fe;">
+      <div class="side-card-top">
+        <div class="side-title">SpendLens — 저축 도우미</div>
+        <div class="side-tags"><span class="tag">Vanilla JS</span><span class="tag">Chart.js</span><span class="tag">localStorage</span></div>
+        <p class="side-desc">월 한도 설정, 지출 입력, 카테고리별 소비 분석, 과소비 경고까지 구현한 개인 재무 대시보드. 모든 데이터는 localStorage에 저장됩니다.</p>
+      </div>
+      <div class="side-btns">
+        <button class="side-btn-preview" style="background:#f5f3ff;color:#7c3aed;" onclick="toggle('pv-savings',this)">▶ 미리보기</button>
+        <button class="side-btn-code" onclick="toggle('cd-savings',this)">&lt;/&gt; 주요 소스 코드</button>
+        <a class="side-btn-visit" style="background:#7c3aed;" href="projects/savings/index.html" target="_blank">🔗 웹사이트 방문</a>
+      </div>
+      <div class="panel" id="pv-savings">
+        <div style="background:#f5f3ff;padding:20px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;">
+            <div style="background:#fff;border:1px solid #ddd6fe;border-radius:10px;padding:12px;"><div style="font-size:11px;color:#9ca3af;">월 한도</div><div style="font-size:18px;font-weight:700;color:#7c3aed;">₩500,000</div></div>
+            <div style="background:#fff;border:1px solid #ddd6fe;border-radius:10px;padding:12px;"><div style="font-size:11px;color:#9ca3af;">이번달 지출</div><div style="font-size:18px;font-weight:700;color:#dc2626;">₩387,000</div></div>
+            <div style="background:#fff;border:1px solid #ddd6fe;border-radius:10px;padding:12px;"><div style="font-size:11px;color:#9ca3af;">잔여 예산</div><div style="font-size:18px;font-weight:700;color:#059669;">₩113,000</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid #ddd6fe;border-radius:10px;padding:12px;margin-bottom:10px;">
+            <div style="font-size:12px;color:#6b7280;margin-bottom:8px;">예산 사용률 — 77%</div>
+            <div style="height:8px;background:#ede9fe;border-radius:99px;overflow:hidden;"><div style="height:100%;width:77%;background:linear-gradient(90deg,#7c3aed,#a78bfa);border-radius:99px;"></div></div>
+          </div>
+          <div style="background:#fff;border:1px solid #fecaca;border-radius:10px;padding:10px;font-size:12px;color:#dc2626;display:flex;align-items:center;gap:6px;">⚠️ 이번달 식비 지출이 한도의 90%를 넘었습니다.</div>
+        </div>
+      </div>
+      <div class="panel" id="cd-savings">
+        <div class="code-block">
+          <div class="code-topbar"><span class="code-filename">src/budget.js</span><button class="copy-btn" onclick="copyCode(this)">복사</button></div>
+          <pre class="code-pre"><span class="ck">// 카테고리별 지출 집계 및 과소비 감지</span>
+<span class="kw">function</span> <span class="fn">analyzeSpending</span>() {
+  <span class="kw">const</span> transactions = <span class="fn">loadTransactions</span>();
+  <span class="kw">const</span> budget = <span class="fn">loadBudget</span>();
+
+  <span class="ck">// 카테고리별 합산</span>
+  <span class="kw">const</span> byCategory = transactions.<span class="fn">reduce</span>((acc, tx) => {
+    acc[tx.category] = (acc[tx.category] ?? <span class="nm">0</span>) + tx.amount;
+    <span class="kw">return</span> acc;
+  }, {});
+
+  <span class="ck">// 과소비 경고 생성</span>
+  <span class="kw">const</span> warnings = Object.<span class="fn">entries</span>(byCategory)
+    .<span class="fn">filter</span>(([cat, spent]) => {
+      <span class="kw">const</span> limit = budget.categories[cat];
+      <span class="kw">return</span> limit && (spent / limit) > <span class="nm">0.9</span>;
+    })
+    .<span class="fn">map</span>(([cat, spent]) => ({
+      category: cat,
+      ratio: Math.<span class="fn">round</span>(spent / budget.categories[cat] * <span class="nm">100</span>),
+    }));
+
+  <span class="fn">renderWarnings</span>(warnings);
+  <span class="fn">renderCategoryChart</span>(byCategory);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Yeonseo Shin</div>
+  <div class="footer-links">
+    <a href="mailto:shinalicelife@naver.com">shinalicelife@naver.com</a>
+    <a href="https://github.com/shinalicelife" target="_blank">GitHub</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
