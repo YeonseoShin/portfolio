@@ -5,13 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>신연서 | Frontend Developer Portfolio</title>
 <link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Pretendard:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<!-- Clash Display (제목) -->
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" />
+<!-- Satoshi (본문) -->
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" />
+<!-- Pretendard (한글 fallback) -->
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+<!-- DM Mono (코드) -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
 <nav>
-  <a href="#hero" class="nav-logo">yeonseo<span>.dev</span></a>
+  <a href="#hero" class="nav-logo">YS</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#activity">활동</a></li>
@@ -21,15 +29,18 @@
 </nav>
 
 <!-- HERO -->
-<section id="hero" style="position:relative;">
-  <div class="hero-kicker">Frontend Developer · Data Visualizer</div>
-  <h1 class="hero-name">신연서</h1>
-  <p class="hero-tagline">데이터를 읽히는 인터페이스로 번역합니다.<br>영어교육 전공 · 데이터과학 이중전공 · 고려대학교</p>
-  <div class="hero-btns">
-    <a href="#projects" class="btn-primary">프로젝트 보기 →</a>
-    <a href="https://github.com/YeonseoShin" target="_blank" class="btn-secondary">GitHub</a>
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Frontend Developer &amp; Data Visualizer</div>
+    <h1 class="hero-name">신연서<span>Yeonseo Shin</span></h1>
+    <p class="hero-role">Complex data → intuitive interface.</p>
+    <p class="hero-desc">영어교육 전공과 데이터과학 이중전공을 바탕으로 복잡한 데이터를 사람 중심의 시각 정보로 번역하는 프론트엔드 개발자입니다.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">프로젝트 보기 ↓</a>
+      <a href="https://github.com/YeonseoShin" target="_blank" class="btn-secondary">GitHub →</a>
+    </div>
   </div>
-  <div class="hero-divider"><span>scroll</span></div>
 </section>
 
 <!-- ABOUT -->

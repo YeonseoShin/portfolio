@@ -124,34 +124,158 @@ function renderKDIC() {
 }
 
 
-// ── Scroll reveal (Intersection Observer) ──
-const revealEls = document.querySelectorAll(
-  '.activity-item, .project-card, .side-card, .info-card, .about-text, .section-title, .section-tag'
-);
+// ══════════════════════════════════════════
+//  Hero — Three.js 3D 그래픽
+//  떠다니는 와이어프레임 노드 + 엣지 네트워크
+// ══════════════════════════════════════════
+(function initHero3D() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
 
-revealEls.forEach(el => el.classList.add('reveal'));
+  const scene    = new THREE.Scene();
+  const camera   = new THREE.PerspectiveCamera(60, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setClearColor(0x0a0e17, 1);
+
+  function resize() {
+    const w = canvas.parentElement.clientWidth;
+    const h = canvas.parentElement.clientHeight;
+    renderer.setSize(w, h);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  camera.position.set(0, 0, 28);
+
+  // ── 노드 생성 ──
+  const NODE_COUNT = 60;
+  const nodes = [];
+  const nodeGeo = new THREE.SphereGeometry(0.18, 8, 8);
+
+  for (let i = 0; i < NODE_COUNT; i++) {
+    const mat = new THREE.MeshBasicMaterial({
+      color: Math.random() > 0.7 ? 0x818cf8 : 0x334155,
+      transparent: true,
+      opacity: Math.random() * 0.5 + 0.3,
     });
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-);
+    const mesh = new THREE.Mesh(nodeGeo, mat);
+    mesh.position.set(
+      (Math.random() - 0.5) * 50,
+      (Math.random() - 0.5) * 30,
+      (Math.random() - 0.5) * 20
+    );
+    mesh.userData.vel = new THREE.Vector3(
+      (Math.random() - 0.5) * 0.012,
+      (Math.random() - 0.5) * 0.008,
+      (Math.random() - 0.5) * 0.005
+    );
+    scene.add(mesh);
+    nodes.push(mesh);
+  }
 
-revealEls.forEach(el => observer.observe(el));
+  // ── 엣지(연결선) 생성 ──
+  const EDGE_DIST = 12;
+  const lineMat = new THREE.LineBasicMaterial({
+    color: 0x334155,
+    transparent: true,
+    opacity: 0.35,
+  });
+  const edgeGroup = new THREE.Group();
+  scene.add(edgeGroup);
 
-// activity-item에 순서별 딜레이 추가
-document.querySelectorAll('.activity-item').forEach((el, i) => {
-  el.style.transitionDelay = `${i * 60}ms`;
-});
-document.querySelectorAll('.side-card').forEach((el, i) => {
-  el.style.transitionDelay = `${i * 80}ms`;
-});
-document.querySelectorAll('.info-card').forEach((el, i) => {
-  el.style.transitionDelay = `${i * 50}ms`;
+  function rebuildEdges() {
+    edgeGroup.clear();
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const d = nodes[i].position.distanceTo(nodes[j].position);
+        if (d < EDGE_DIST) {
+          const geo = new THREE.BufferGeometry().setFromPoints([
+            nodes[i].position.clone(),
+            nodes[j].position.clone(),
+          ]);
+          edgeGroup.add(new THREE.Line(geo, lineMat));
+        }
+      }
+    }
+  }
+  rebuildEdges();
+
+  // ── 마우스 패럴랙스 ──
+  let mouseX = 0, mouseY = 0;
+  window.addEventListener('mousemove', e => {
+    mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  // ── 스크롤: 배경색 다크 → 라이트 ──
+  const heroEl = document.getElementById('hero');
+  function onScroll() {
+    const scrollY = window.scrollY;
+    const heroH   = heroEl.offsetHeight;
+    const t = Math.min(scrollY / (heroH * 0.6), 1); // 0 → 1
+
+    // 배경: #0a0e17 → #ffffff
+    const r = Math.round(10  + (255 - 10)  * t);
+    const g = Math.round(14  + (255 - 14)  * t);
+    const b = Math.round(23  + (255 - 23)  * t);
+    heroEl.style.background = `rgb(${r},${g},${b})`;
+
+    // 텍스트 색: 흰 → 검정
+    const heroContent = heroEl.querySelector('.hero-content');
+    heroContent.style.opacity = t > 0.7 ? 0 : 1 - t * 0.6;
+
+    // canvas 페이드
+    canvas.style.opacity = 1 - t;
+
+    // renderer 배경색도 함께
+    renderer.setClearColor(new THREE.Color(`rgb(${r},${g},${b})`), 1);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ── 애니메이션 루프 ──
+  let edgeTimer = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+
+    nodes.forEach(n => {
+      n.position.add(n.userData.vel);
+      if (Math.abs(n.position.x) > 26) n.userData.vel.x *= -1;
+      if (Math.abs(n.position.y) > 16) n.userData.vel.y *= -1;
+      if (Math.abs(n.position.z) > 12) n.userData.vel.z *= -1;
+    });
+
+    edgeTimer++;
+    if (edgeTimer % 6 === 0) rebuildEdges();
+
+    camera.position.x += (mouseX * 3 - camera.position.x) * 0.04;
+    camera.position.y += (-mouseY * 2 - camera.position.y) * 0.04;
+    camera.lookAt(scene.position);
+
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+
+// ── Scroll reveal (Intersection Observer) ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('revealed');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+document.querySelectorAll(
+  '.activity-item, .project-card, .side-card, .info-card, .about-text, .section-title, .section-tag'
+).forEach((el, i) => {
+  el.classList.add('reveal');
+  if (el.classList.contains('activity-item')) el.style.transitionDelay = (i % 7 * 55) + 'ms';
+  if (el.classList.contains('side-card'))     el.style.transitionDelay = (i % 3 * 70) + 'ms';
+  if (el.classList.contains('info-card'))     el.style.transitionDelay = (i % 5 * 45) + 'ms';
+  revealObserver.observe(el);
 });
