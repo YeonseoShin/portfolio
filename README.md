@@ -1,6 +1,9 @@
-# 신연서 | Frontend Developer Portfolio
+# 신연서 | Data-Driven Developer Portfolio
 
 고려대학교 **영어교육학과** (본전공) · **데이터과학과** (이중전공) 재학 중인 신연서의 포트폴리오입니다.
+
+데이터 수집부터 분석, 시각화, 인터페이스까지 전 과정을 다루는 Data-Driven Developer로,
+데이터 파이프라인과 인터페이스가 교차하는 지점에서의 구현 경험을 쌓아왔습니다.
 
 ## 배포
 
@@ -33,7 +36,9 @@ portfolio/
     │       └── components/
     │           ├── SkeletonOverlay.tsx
     │           └── AngleDashboard.tsx
-    ├── kdic/                         # 금융 대시보드
+    ├── kdic/                         # 금융권역별 안정성 리포트
+    │   └── index.html
+    ├── news-dashboard/               # 금융 뉴스 경제 흐름 분석 (미리보기)
     │   └── index.html
     ├── kanban/                       # 칸반 보드
     │   ├── index.html
@@ -62,6 +67,11 @@ portfolio/
 ### 금융권역별 안정성 리포트 대시보드
 - **역할:** 1인 기획·개발 / **수상:** 예금보험공사 공공데이터 공모전 장려상 (2025.08)
 - **스택:** Python · pandas · Altair · Tableau · Chart.js
+
+### 금융 뉴스 경제 흐름 분석 대시보드
+- **역할:** 1인 기획·개발
+- **스택:** Python · Streamlit · HuggingFace (KR-FinBert) · 네이버 뉴스 API · yfinance · Plotly
+- **GitHub:** https://github.com/YeonseoShin/financial-news-dashboard
 
 ---
 

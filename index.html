@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>신연서 | Frontend Developer Portfolio</title>
+<title>신연서 | Data-Driven Developer Portfolio</title>
 <link rel="stylesheet" href="style.css" />
 <!-- Clash Display (제목) -->
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" />
@@ -32,10 +32,10 @@
 <section id="hero">
   <canvas id="hero-canvas"></canvas>
   <div class="hero-content">
-    <div class="hero-eyebrow">Frontend Developer &amp; Data Visualizer</div>
+    <div class="hero-eyebrow">Data-Driven Developer</div>
     <h1 class="hero-name">신연서<span>Yeonseo Shin</span></h1>
     <p class="hero-role">Complex data → intuitive interface.</p>
-    <p class="hero-desc">영어교육 전공과 데이터과학 이중전공을 바탕으로 복잡한 데이터를 사람 중심의 시각 정보로 번역하는 프론트엔드 개발자입니다.</p>
+    <p class="hero-desc">영어교육 전공과 데이터과학 이중전공을 바탕으로 데이터 수집부터 분석, 시각화, 인터페이스까지 전 과정을 다루는 Data-Driven Developer입니다.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">프로젝트 보기 ↓</a>
       <a href="https://github.com/YeonseoShin" target="_blank" class="btn-secondary">GitHub →</a>
@@ -50,7 +50,7 @@
   <div class="about-grid">
     <div class="about-text">
       <p>안녕하세요, 고려대학교 <strong>영어교육학과</strong>를 본전공으로, <strong>데이터과학과</strong>를 이중전공하고 있는 신연서입니다.</p>
-      <p>언어와 데이터 두 분야를 넘나들며, 복잡한 정보를 누구나 직관적으로 이해할 수 있는 인터페이스로 만드는 것에 관심이 있습니다. 비전 AI 연동 실시간 스켈레톤 시각화, 공공데이터 기반 금융 리스크 대시보드 등 <strong>데이터와 프론트엔드가 교차하는 지점</strong>에서의 구현 경험을 쌓아왔습니다.</p>
+      <p>언어와 데이터 두 분야를 넘나들며, 복잡한 정보를 누구나 직관적으로 이해할 수 있는 인터페이스로 만드는 것에 관심이 있습니다. 비전 AI 연동 실시간 스켈레톤 시각화, 공공데이터 기반 금융 리스크 대시보드 등 <strong>데이터 파이프라인과 인터페이스가 교차하는 지점</strong>에서의 구현 경험을 쌓아왔습니다.</p>
       <p>외부 라이브러리에 의존하기보다 삼각함수 기반 각도 계산, SVG 동적 렌더링, Canvas API 등 <strong>웹 표준 기술을 직접 다루는 것</strong>을 즐깁니다.</p>
       <div class="about-tags">
         <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">SVG</span>
@@ -371,6 +371,124 @@
         .sum(axis=<span class="nm">1</span>).clip(<span class="nm">0</span>, <span class="nm">100</span>).round(<span class="nm">1</span>)
     )
     <span class="kw">return</span> df.sort_values(<span class="st">'TrustScore'</span>, ascending=<span class="nm">False</span>)</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. News Dashboard -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">금융 뉴스 경제 흐름 분석 대시보드</h3>
+        <span class="project-badge" style="color:#0f766e;border-color:#99f6e4;background:#f0fdfa;">Full-stack</span>
+      </div>
+      <div class="project-meta">Python · Streamlit · HuggingFace · 네이버 뉴스 API · yfinance · Plotly</div>
+      <p class="project-desc">네이버 뉴스 API로 수집한 금융 기사를 한국어 특화 AI 모델(KR-FinBert)로 분류해 시장 심리를 시각화합니다. 복잡한 모델을 처음부터 학습시키는 대신, 공개 API와 오픈소스를 통합하는 엔지니어링 역량과 금융 도메인 지식을 결합했습니다. 연관 주가 차트, 종목 언급 빈도, 리스크 키워드 감지까지 포함한 금융 특화 분석 기능을 갖추고 있습니다.</p>
+      <div class="role-box">
+        <div class="role-title">역할 분담 (1인 프로젝트)</div>
+        <div class="role-grid">
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>전체 기획 및 개발 (단독)</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>네이버 API 뉴스 수집 파이프라인</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>KR-FinBert 심리 분석 모듈</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>주가·종목·리스크 분석</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>Streamlit 대시보드 UI</div>
+          <div class="role-item mine"><span class="role-dot mine-dot"></span>PDF·CSV·JSON 내보내기</div>
+        </div>
+      </div>
+      <div class="action-btns">
+        <button class="btn-preview" onclick="toggle('pv-news',this)">▶ 미리보기</button>
+        <button class="btn-code" onclick="toggle('cd-news',this)">&lt;/&gt; 주요 소스 코드</button>
+        <a class="btn-visit" href="https://github.com/YeonseoShin/financial-news-dashboard" target="_blank">🔗 GitHub 바로가기</a>
+      </div>
+      <div class="panel" id="pv-news">
+        <div class="browser-bar">
+          <span class="bdot" style="background:#ef4444"></span>
+          <span class="bdot" style="background:#f59e0b"></span>
+          <span class="bdot" style="background:#10b981"></span>
+          <span class="burl">projects/news-dashboard/index.html</span>
+        </div>
+        <iframe
+          src="projects/news-dashboard/index.html"
+          style="width:100%;height:520px;border:none;display:block;"
+          title="금융 뉴스 경제 흐름 분석 대시보드 미리보기"
+        ></iframe>
+      </div>
+      <div class="panel" id="cd-news">
+        <div class="code-block">
+          <div class="code-topbar">
+            <span class="code-filename">src/analyzer.py</span>
+            <button class="copy-btn" onclick="copyCode(this)">복사</button>
+          </div>
+          <pre class="code-pre"><span class="kw">def</span> <span class="fn">analyze_sentiment</span>(text: <span class="tp">str</span>, model: <span class="tp">str</span> = <span class="st">"huggingface"</span>) -> <span class="tp">dict</span>:
+    <span class="st">"""
+    단일 텍스트의 시장 심리를 분류합니다.
+    KR-FinBert: 한국어 금융 뉴스 특화 사전학습 모델
+    """</span>
+    <span class="kw">if not</span> text <span class="kw">or not</span> text.strip():
+        <span class="kw">return</span> {<span class="st">"label"</span>: <span class="st">"중립"</span>, <span class="st">"score"</span>: <span class="nm">0.5</span>}
+
+    <span class="kw">if</span> model == <span class="st">"openai"</span>:
+        <span class="kw">return</span> <span class="fn">_analyze_with_openai</span>(text)
+    <span class="kw">return</span> <span class="fn">_analyze_with_huggingface</span>(text)
+
+
+<span class="kw">def</span> <span class="fn">_analyze_with_huggingface</span>(text: <span class="tp">str</span>) -> <span class="tp">dict</span>:
+    pipe = <span class="fn">_load_hf_model</span>()  <span class="ck"># 첫 호출 시 모델 로드·캐싱</span>
+    result = pipe(text[:<span class="nm">512</span>])[<span class="nm">0</span>]
+    label_map = {
+        <span class="st">"positive"</span>: <span class="st">"긍정"</span>, <span class="st">"negative"</span>: <span class="st">"부정"</span>, <span class="st">"neutral"</span>: <span class="st">"중립"</span>
+    }
+    <span class="kw">return</span> {
+        <span class="st">"label"</span>: label_map.get(result[<span class="st">"label"</span>], <span class="st">"중립"</span>),
+        <span class="st">"score"</span>: <span class="fn">float</span>(result[<span class="st">"score"</span>]),
+    }</pre>
+        </div>
+        <div class="code-block" style="margin-top:10px;">
+          <div class="code-topbar">
+            <span class="code-filename">src/stock.py</span>
+            <button class="copy-btn" onclick="copyCode(this)">복사</button>
+          </div>
+          <pre class="code-pre"><span class="kw">def</span> <span class="fn">analyze_risk</span>(texts: list[<span class="tp">str</span>]) -> <span class="tp">dict</span>:
+    <span class="st">"""
+    기사 본문에서 리스크 키워드 빈도를 집계하고
+    가중 점수 기반으로 위험 등급을 산출합니다.
+    고위험 ×3 / 중위험 ×2 / 저위험 ×1 가중합
+    """</span>
+    combined = <span class="st">" "</span>.join(texts)
+    score = <span class="nm">0</span>
+
+    <span class="kw">for</span> level, keywords <span class="kw">in</span> RISK_KEYWORDS.items():
+        weight = {<span class="st">"고위험"</span>: <span class="nm">3</span>, <span class="st">"중위험"</span>: <span class="nm">2</span>, <span class="st">"저위험"</span>: <span class="nm">1</span>}[level]
+        <span class="kw">for</span> kw <span class="kw">in</span> keywords:
+            cnt = combined.count(kw)
+            <span class="kw">if</span> cnt > <span class="nm">0</span>:
+                score += cnt * weight
+
+    <span class="kw">if</span>   score >= <span class="nm">50</span>: grade = <span class="st">"고위험"</span>
+    <span class="kw">elif</span> score >= <span class="nm">20</span>: grade = <span class="st">"주의"</span>
+    <span class="kw">else</span>:             grade = <span class="st">"안정"</span>
+    <span class="kw">return</span> {<span class="st">"총점"</span>: score, <span class="st">"등급"</span>: grade}</pre>
+        </div>
+        <div class="code-block" style="margin-top:10px;">
+          <div class="code-topbar">
+            <span class="code-filename">src/processor.py</span>
+            <button class="copy-btn" onclick="copyCode(this)">복사</button>
+          </div>
+          <pre class="code-pre"><span class="kw">def</span> <span class="fn">extract_nouns</span>(text: <span class="tp">str</span>) -> list[<span class="tp">str</span>]:
+    <span class="st">"""
+    KoNLPy Okt 형태소 분석기로 순수 명사만 추출합니다.
+    품사 태깅 결과에서 Noun만 필터링하여
+    어미·조사가 붙은 단어와 불용어를 제거합니다.
+    """</span>
+    text   = <span class="fn">clean_text</span>(text)
+    tagged = okt.<span class="fn">pos</span>(text, norm=<span class="nm">True</span>, stem=<span class="nm">True</span>)
+    <span class="kw">return</span> [
+        word <span class="kw">for</span> word, pos <span class="kw">in</span> tagged
+        <span class="kw">if</span> pos == <span class="st">"Noun"</span>
+        <span class="kw">and</span> <span class="fn">len</span>(word) >= MIN_WORD_LEN      <span class="ck"># 3글자 이상</span>
+        <span class="kw">and</span> word <span class="kw">not in</span> STOPWORDS          <span class="ck"># 불용어 제외</span>
+        <span class="kw">and</span> re.<span class="fn">search</span>(<span class="st">r"[가-힣]"</span>, word)    <span class="ck"># 한글 포함</span>
+        <span class="kw">and not</span> re.<span class="fn">match</span>(<span class="st">r"^\d+$"</span>, word)  <span class="ck"># 숫자만인 단어 제외</span>
+    ]</pre>
         </div>
       </div>
     </div>
